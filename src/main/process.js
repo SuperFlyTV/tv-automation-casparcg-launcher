@@ -47,8 +47,11 @@ export class ProcessMonitor {
     if (!path.isAbsolute(basePath)) {
       basePath = path.join(process.env.PORTABLE_EXECUTABLE_DIR, basePath)
     }
+    let procPath = this.exeName
+    if (!path.isAbsolute(procPath)) {
+      procPath = path.join(basePath, procPath)
+    }
 
-    const procPath = path.join(basePath, this.exeName)
     log.info(`Booting Process ${procPath}`)
 
     let fileExists

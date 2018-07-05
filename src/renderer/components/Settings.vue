@@ -33,6 +33,26 @@
             </b-form-input>
           </b-form-group>
           
+          <b-form-group id="elgatoExeInputGroup"
+                        label="Elgato Exe (Needs restart):"
+                        label-for="elgatoExeInput">
+            <b-form-input id="elgatoExeInput"
+                          type="text"
+                          v-model="config.exe.elgato"
+                          placeholder="">
+            </b-form-input>
+          </b-form-group>
+          
+          <b-form-group id="elgatoArgsInputGroup"
+                        label="Elgato Arguments:"
+                        label-for="elgatoArgsInput">
+            <b-form-input id="elgatoArgsInput"
+                          type="text"
+                          v-model="config.args.elgato"
+                          placeholder="">
+            </b-form-input>
+          </b-form-group>
+          
           <b-form-group id="httpApiEnableGroup"
                         label="Enable HTTP Api:"
                         label-for="httpApiEnableInput">
@@ -112,6 +132,9 @@
         if (!this.config.api.staticPaths) {
           this.config.api.staticPaths = []
         }
+        if (!this.config.exe) {
+          this.config.exe = {}
+        }
       })
       ipcRenderer.send('config.get')
     },
@@ -121,7 +144,8 @@
           api: {
             staticPaths: []
           },
-          args: {}
+          args: {},
+          exe: {}
         }
       }
     },

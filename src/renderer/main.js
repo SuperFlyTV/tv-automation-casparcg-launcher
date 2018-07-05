@@ -13,7 +13,7 @@ import store from './store'
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 Vue.config.productionTip = false
 
-const ids = ['casparcg', 'media-scanner']
+const ids = ['casparcg', 'media-scanner', 'elgato']
 ids.forEach(id => {
   store.dispatch('init', {id})
   ipcRenderer.on(id + '.log', (e, data) => {

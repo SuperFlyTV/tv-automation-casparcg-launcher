@@ -109,7 +109,11 @@ function startupProcesses () {
   })
 
   processes['casparcg'] = new ProcessMonitor('casparcg', wrapper, config, 'casparcg.exe', new CasparCGHealthMonitor())
+  
+
+  // TODO make config.processes be an array that can be expanded on. both of these should exist in there and handle all changes gracefully
   processes['media-scanner'] = new ProcessMonitor('media-scanner', wrapper, config, 'scanner.exe')
+  processes['elgato'] = new ProcessMonitor('elgato', wrapper, config, config.get('exe.elgato', ''))
 }
 
 function stopProcesses () {
