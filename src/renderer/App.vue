@@ -5,7 +5,7 @@
       <b-navbar-nav>
         <b-nav-item to="/casparcg">CasparCG</b-nav-item>
         <b-nav-item to="/media-scanner">Media Scanner</b-nav-item>
-        <b-nav-item to="/elgato">Elgato</b-nav-item>
+        <b-nav-item to="/elgato">Streamdeck</b-nav-item>
       </b-navbar-nav>
       
       <b-navbar-nav  class="ml-auto">
