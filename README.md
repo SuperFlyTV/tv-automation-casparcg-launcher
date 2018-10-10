@@ -9,6 +9,7 @@
  * Option to pass through command line options to each executable
  * Basic http api to stop/start/restart each process remotely
  * Auto restart each process upon crashing or exiting
+ * Serve folders over http (eg templates, media)
 
 ### Screenshots
 
@@ -27,7 +28,6 @@ yarn run dev
 
 # build electron application for production
 yarn run build
-
 
 # lint all JS/Vue component files in `src/`
 yarn run lint
