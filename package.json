@@ -1,6 +1,6 @@
 {
   "name": "casparcg-launcher",
-  "version": "0.3.0-elgato",
+  "version": "0.3.1-elgato",
   "author": "Julian Waller <julian@superfly.tv>",
   "description": "Simple launcher for CasparCG",
   "license": "MIT",
