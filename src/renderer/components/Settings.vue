@@ -116,6 +116,8 @@
           <b-button type="submit" variant="primary">Save</b-button>
           <b-button type="reset" variant="danger">Reset</b-button>
 
+          <p>Version: {{ version }}</p>
+
         </b-form>
       </b-col>
     </b-row>
@@ -124,6 +126,7 @@
 
 <script>
   const {ipcRenderer} = require('electron')
+  const packageJson = require('../../../package.json')
 
   export default {
     created () {
@@ -150,6 +153,7 @@
     },
     data () {
       return {
+        version: packageJson.version,
         config: {
           api: {
             staticPaths: []
